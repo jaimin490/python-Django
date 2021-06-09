@@ -1,0 +1,101 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Register</title>
+<style>
+		.c-box{
+			border: 10px solid gray;height: auto; width:1050px; margin :auto;background-color: #102433; font-family: sans-serif;font-weight: bold;
+			border-radius: 20px;
+			}
+		.form-box{
+			padding:auto;
+			color:gray	
+			}
+        td{
+            color:gray
+        }
+		body{
+			margin:50px;
+			padding:0			
+		}
+		input,textarea{
+			width:60%
+		}
+		input[type=text],textarea,radio {
+ 		 	width: 100%;
+  			padding: 12px 20px;
+  			margin: 8px 0;
+	     	box-sizing: border-box;
+		}
+		td{
+			width:30%
+		}
+</style>
+</head>
+<body bgcolor="#102433">
+
+<div class = 'c-box'>
+	<center>
+	<div class = 'form-box'>
+	
+	<h2>Register here!!!</h2>
+	<form method="POST" action="regProcess">
+    {% csrf_token %}
+		<table style = 'border:none'>
+			<tr>
+				<td>First Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </td>
+				<td><input type= 'text' name = 'fname'  required="" ></td>
+			</tr>
+			<tr>
+				<td>Middle Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><input type= 'text' name = 'mname'  required=""></td>
+			</tr>
+			<tr>
+				<td>Last Name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><input type= 'text' name = 'lname'  required=""></td>
+			</tr>
+			<tr>
+				<td>Mobile No : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><input type= 'text' name = 'contact'  pattern="[0-9.]+" maxlength="10"></td>
+			</tr>
+            <tr>
+				<td>College name : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><input type= 'text' name = 'cname'  required=""></td>
+			</tr>
+            <tr>
+				<td>Department : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><input type= 'text' name = 'department' required=""></td>
+			</tr>
+			<tr>
+				<td>Address : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><textarea name="address" required="">
+			</textarea></td>
+			</tr>
+            <tr>
+				<td>gender :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><input type="radio" name="gender" value="male">male
+					<input type="radio" name="gender" value="female">female</td>
+			</tr>
+			<tr>
+				<td>EMail ID :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+				<td><input type= "text" name = 'email' 	required=""></td>
+			</tr>
+            <tr>
+				<td>User Name :</td>
+				<td><input type="text" name="uname"></td>
+			</tr>
+			
+			<tr>
+				<td><input type = 'submit' value = 'submit' name= 'submit'></td>
+				<td><input type = 'reset' value = 'cancel' name = 'cancel'></td>
+			</tr>		 
+		</table>
+	</form>
+	</div>
+	</center>
+	
+</div>
+
+</body>
+</html>
