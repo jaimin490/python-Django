@@ -9,4 +9,5 @@ urlpatterns = [
     path('formprocess',views.process,name='process'),
     path('register',views.register,name='register'),
     path('regProcess',views.reg,name='reg'),
+    path('Elist',views.EmployeeListview.as_view(),name='employee'),
 ]

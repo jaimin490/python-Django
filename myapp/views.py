@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, response
+from django.views.generic import ListView
+from .models import Employee
 
 def homepageview(request):
     return render(request,'home.html')
@@ -39,3 +41,7 @@ def reg(request):
     uname = request.POST['uname']
     print(fname, mname,lname,contact,cname,department,address,gender,email,uname)
     return HttpResponse("You are registerd successfully !!!")
+
+class EmployeeListview (ListView):
+    model = Employee
+    template_name = 'Elist.html'
